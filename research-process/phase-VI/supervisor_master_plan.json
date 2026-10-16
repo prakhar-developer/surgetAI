@@ -1,0 +1,47 @@
+{
+  "root_goal": "Process Q3 Vendor Audit and Reconciliation across SAP, Excel, and Outlook",
+  "total_subtasks": 4,
+  "planning_latency_ms": 0.002200000380980782,
+  "parallel_stages": 3,
+  "subtasks": [
+    {
+      "task_id": "T1_SAP_EXPORT",
+      "assigned_worker": "ERP_Worker",
+      "description": "Export raw Q3 vendor invoice ledger from desktop SAP GUI",
+      "depends_on": [],
+      "parallel_group": 1,
+      "expected_output": "sap_raw_invoices.csv"
+    },
+    {
+      "task_id": "T2_EXCEL_RECONCILIATION",
+      "assigned_worker": "Excel_Worker",
+      "description": "Reconcile purchase orders against bank statement totals in Excel",
+      "depends_on": [
+        "T1_SAP_EXPORT"
+      ],
+      "parallel_group": 2,
+      "expected_output": "reconciliation_matrix.xlsx"
+    },
+    {
+      "task_id": "T3_TAX_AUDIT",
+      "assigned_worker": "Tax_Worker",
+      "description": "Calculate VAT withholding and verify IRS/GST compliance codes",
+      "depends_on": [
+        "T1_SAP_EXPORT"
+      ],
+      "parallel_group": 2,
+      "expected_output": "tax_audit_report.json"
+    },
+    {
+      "task_id": "T4_DISPATCH_NOTIFICATIONS",
+      "assigned_worker": "Comms_Worker",
+      "description": "Draft summary email in Outlook and notify stakeholders on Slack",
+      "depends_on": [
+        "T2_EXCEL_RECONCILIATION",
+        "T3_TAX_AUDIT"
+      ],
+      "parallel_group": 3,
+      "expected_output": "email_dispatched_receipt"
+    }
+  ]
+}
