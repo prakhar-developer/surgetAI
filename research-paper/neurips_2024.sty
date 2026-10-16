@@ -1,0 +1,89 @@
+% neurips_2024.sty - Style file for NeurIPS 2024 / 2025 conference submissions
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2024}[2024/02/01 NeurIPS 2024 submission/camera-ready style]
+
+\DeclareOption{final}{\def\neuripsfinal{1}}
+\DeclareOption{preprint}{\def\neuripspreprint{1}}
+\ProcessOptions\relax
+
+\RequirePackage{geometry}
+\geometry{
+  letterpaper,
+  textwidth=5.5in,
+  textheight=9.0in,
+  top=1.0in,
+  headheight=12pt,
+  headsep=25pt,
+  footskip=30pt
+}
+
+\RequirePackage{times}
+\RequirePackage{microtype}
+
+% Title format
+\def\maketitle{%
+  \par
+  \begingroup
+    \renewcommand\thefootnote{\fnsymbol{footnote}}%
+    \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
+    \long\def\@makefntext##1{\parindent 1em\noindent
+            \hb@xt@1.8em{%
+                \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
+    \newpage
+    \null
+    \vskip 2em%
+    \begin{center}%
+      \vbox to 0pt{\vskip -30pt
+        \ifdefined\neuripsfinal
+          \centerline{\small Appears in \textit{Advances in Neural Information Processing Systems 38 (NeurIPS 2025)}}
+        \else
+          \ifdefined\neuripspreprint
+            \centerline{\small Preprint. Under review at NeurIPS 2025.}
+          \else
+            \centerline{\small Submitted to \textit{38th Conference on Neural Information Processing Systems (NeurIPS 2025)}}
+          \fi
+        \fi
+      \vss}
+      \vskip 20pt
+      \hrule height 4pt
+      \vskip 0.25in
+      {\LARGE\bf \@title \par}%
+      \vskip 0.2in
+      \hrule height 1pt
+      \vskip 0.25in
+      {\large
+        \lineskip .5em%
+        \begin{tabular}[t]{c}%
+          \@author
+        \end{tabular}\par}%
+      \vskip 0.2in
+    \end{center}%
+    \par
+    \@thanks
+  \endgroup
+  \setcounter{footnote}{0}%
+}
+
+% Abstract environment
+\renewenvironment{abstract}{%
+  \begin{center}%
+    {\bfseries \abstractname\vspace{-.5em}\vspace{0pt}}%
+  \end{center}%
+  \quotation
+}{\endquotation}
+
+% Section styling
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-2.5ex \@plus -1ex \@minus -.2ex}%
+                                   {1.5ex \@plus.2ex}%
+                                   {\normalfont\large\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-2.0ex\@plus -0.8ex \@minus -.2ex}%
+                                     {1.0ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-1.5ex\@plus -0.5ex \@minus -.2ex}%
+                                     {0.8ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+
+\endinput
