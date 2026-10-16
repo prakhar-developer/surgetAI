@@ -1,0 +1,81 @@
+{
+  "workflow_id": "wf_create_vendor_dag",
+  "title": "Automated Vendor Registration Workflow",
+  "synthesized_from": "Human Demonstration #1",
+  "parameters": {
+    "vendor_name": {
+      "type": "string",
+      "default": "Global Corp",
+      "description": "Target company/vendor name to register"
+    }
+  },
+  "nodes": [
+    {
+      "id": "node_01_click_VendorsTab",
+      "step_index": 1,
+      "action": "click",
+      "target": "VendorsTab",
+      "coords": [
+        110,
+        160
+      ],
+      "depends_on": [],
+      "assertion": "verify_VendorsTab_executed"
+    },
+    {
+      "id": "node_02_click_NewVendorButton",
+      "step_index": 2,
+      "action": "click",
+      "target": "NewVendorButton",
+      "coords": [
+        260,
+        220
+      ],
+      "depends_on": [
+        "node_01_click_VendorsTab"
+      ],
+      "assertion": "verify_NewVendorButton_executed"
+    },
+    {
+      "id": "node_03_click_VendorNameInput",
+      "step_index": 3,
+      "action": "click",
+      "target": "VendorNameInput",
+      "coords": [
+        350,
+        310
+      ],
+      "depends_on": [
+        "node_02_click_NewVendorButton"
+      ],
+      "assertion": "verify_VendorNameInput_executed"
+    },
+    {
+      "id": "node_04_type_text_VendorNameInput",
+      "step_index": 4,
+      "action": "type_text",
+      "target": "VendorNameInput",
+      "coords": null,
+      "depends_on": [
+        "node_03_click_VendorNameInput"
+      ],
+      "assertion": "verify_VendorNameInput_executed",
+      "parameter_binding": "{{vendor_name}}",
+      "literal_example": "Global Corp"
+    },
+    {
+      "id": "node_05_click_SaveVendorButton",
+      "step_index": 5,
+      "action": "click",
+      "target": "SaveVendorButton",
+      "coords": [
+        520,
+        620
+      ],
+      "depends_on": [
+        "node_04_type_text_VendorNameInput"
+      ],
+      "assertion": "verify_SaveVendorButton_executed"
+    }
+  ]
+}

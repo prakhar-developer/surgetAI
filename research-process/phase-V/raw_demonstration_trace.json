@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "t": 1792020555.8705916,
+    "type": "mouse_move",
+    "coords": [
+      100,
+      150
+    ],
+    "dwell_ms": 20
+  },
+  {
+    "id": 2,
+    "t": 1792020555.9405916,
+    "type": "mouse_move",
+    "coords": [
+      102,
+      153
+    ],
+    "dwell_ms": 15
+  },
+  {
+    "id": 3,
+    "t": 1792020556.1705916,
+    "type": "mouse_hover",
+    "coords": [
+      105,
+      155
+    ],
+    "dwell_ms": 120
+  },
+  {
+    "id": 4,
+    "t": 1792020556.3205917,
+    "type": "click",
+    "coords": [
+      110,
+      160
+    ],
+    "target": "VendorsTab",
+    "element_type": "TabItem"
+  },
+  {
+    "id": 5,
+    "t": 1792020558.6205916,
+    "type": "idle_pause",
+    "coords": [
+      110,
+      160
+    ],
+    "dwell_ms": 2300
+  },
+  {
+    "id": 6,
+    "t": 1792020558.8705916,
+    "type": "mouse_move",
+    "coords": [
+      250,
+      210
+    ],
+    "dwell_ms": 30
+  },
+  {
+    "id": 7,
+    "t": 1792020559.0205917,
+    "type": "click",
+    "coords": [
+      260,
+      220
+    ],
+    "target": "NewVendorButton",
+    "element_type": "Button"
+  },
+  {
+    "id": 8,
+    "t": 1792020559.4205916,
+    "type": "click",
+    "coords": [
+      350,
+      310
+    ],
+    "target": "VendorNameInput",
+    "element_type": "Edit"
+  },
+  {
+    "id": 9,
+    "t": 1792020559.6205916,
+    "type": "keypress",
+    "key": "G",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 10,
+    "t": 1792020559.7405918,
+    "type": "keypress",
+    "key": "l",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 11,
+    "t": 1792020559.8705916,
+    "type": "keypress",
+    "key": "o",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 12,
+    "t": 1792020560.0005918,
+    "type": "keypress",
+    "key": "b",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 13,
+    "t": 1792020560.1205916,
+    "type": "keypress",
+    "key": "a",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 14,
+    "t": 1792020560.2405918,
+    "type": "keypress",
+    "key": "l",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 15,
+    "t": 1792020560.3705916,
+    "type": "keypress",
+    "key": " ",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 16,
+    "t": 1792020560.5005918,
+    "type": "keypress",
+    "key": "C",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 17,
+    "t": 1792020560.6205916,
+    "type": "keypress",
+    "key": "o",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 18,
+    "t": 1792020560.7405918,
+    "type": "keypress",
+    "key": "r",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 19,
+    "t": 1792020560.8705916,
+    "type": "keypress",
+    "key": "p",
+    "field": "VendorNameInput"
+  },
+  {
+    "id": 20,
+    "t": 1792020561.3205917,
+    "type": "mouse_hover",
+    "coords": [
+      500,
+      600
+    ],
+    "dwell_ms": 250
+  },
+  {
+    "id": 21,
+    "t": 1792020561.6205916,
+    "type": "click",
+    "coords": [
+      520,
+      620
+    ],
+    "target": "SaveVendorButton",
+    "element_type": "Button"
+  }
+]

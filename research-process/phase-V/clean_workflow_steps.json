@@ -1,0 +1,43 @@
+[
+  {
+    "action": "click",
+    "target": "VendorsTab",
+    "coords": [
+      110,
+      160
+    ],
+    "element_type": "TabItem"
+  },
+  {
+    "action": "click",
+    "target": "NewVendorButton",
+    "coords": [
+      260,
+      220
+    ],
+    "element_type": "Button"
+  },
+  {
+    "action": "click",
+    "target": "VendorNameInput",
+    "coords": [
+      350,
+      310
+    ],
+    "element_type": "Edit"
+  },
+  {
+    "action": "type_text",
+    "target": "VendorNameInput",
+    "value": "Global Corp"
+  },
+  {
+    "action": "click",
+    "target": "SaveVendorButton",
+    "coords": [
+      520,
+      620
+    ],
+    "element_type": "Button"
+  }
+]
